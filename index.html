@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Portfolio of Ruqoyyah Bello, Customer Success Specialist in Lagos, Nigeria.">
+<title>Ruqoyyah Bello</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,600..900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root {
+  --bg: #F1F3F5;
+  --surface: #FFFFFF;
+  --fg: #151A22;
+  --muted: #4B5563;
+  --rule: #C9D0D8;
+  --hl: #F6BE00;
+  --on-hl: #151A22;
+  --link: #0B4F8A;
+  --focus: #0B4F8A;
+  --display: "Archivo", "Arial Narrow", Arial, sans-serif;
+  --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #11151B;
+    --surface: #1A2029;
+    --fg: #ECEFF3;
+    --muted: #A3ADBA;
+    --rule: #2E3744;
+    --link: #8DC1F2;
+    --focus: #8DC1F2;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #11151B;
+  --surface: #1A2029;
+  --fg: #ECEFF3;
+  --muted: #A3ADBA;
+  --rule: #2E3744;
+  --link: #8DC1F2;
+  --focus: #8DC1F2;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--body);
+  font-size: 1rem;
+  line-height: 1.6;
+  padding-inline: clamp(16px, 5vw, 48px);
+  padding-block: 0 4rem;
+  margin: 0;
+}
+.wrap { max-width: 62rem; margin-inline: auto; }
+a { color: var(--link); text-underline-offset: 3px; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.hl { background: var(--hl); color: var(--on-hl); padding: 0 .18em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.top {
+  display: flex; flex-wrap: wrap; gap: .5rem 1.5rem;
+  justify-content: space-between; align-items: baseline;
+  padding-block: 1.25rem;
+  border-bottom: 1px solid var(--rule);
+  font-family: var(--mono); font-size: .8rem; letter-spacing: .04em; text-transform: uppercase;
+}
+.top b { font-weight: 500; }
+.top span { color: var(--muted); }
+.hero { padding-block: clamp(2.5rem, 8vw, 5rem) clamp(2rem, 5vw, 3rem); }
+h1 {
+  font-family: var(--display);
+  font-stretch: 75%;
+  font-weight: 800;
+  font-size: clamp(2.7rem, 10vw, 6rem);
+  line-height: .98;
+  letter-spacing: -.01em;
+  margin: 0 0 1.5rem;
+  text-wrap: balance;
+  max-width: 14ch;
+}
+.lede { font-size: clamp(1.05rem, 2.4vw, 1.25rem); max-width: 40rem; margin: 0 0 1.75rem; color: var(--fg); }
+.cta { display: flex; flex-wrap: wrap; gap: .75rem; }
+.btn {
+  display: inline-block; font: 600 .95rem var(--body);
+  padding: .7rem 1.1rem; border: 2px solid var(--fg); color: var(--fg);
+  background: transparent; text-decoration: none; cursor: pointer; border-radius: 2px;
+}
+.btn.primary { background: var(--hl); border-color: var(--hl); color: var(--on-hl); }
+.btn:hover { text-decoration: underline; }
+.strip {
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem; margin: 0; padding-block: 1.75rem;
+  border-block: 1px solid var(--rule);
+}
+.strip div { min-width: 0; }
+.strip dt {
+  font-family: var(--display); font-stretch: 75%; font-weight: 800;
+  font-size: clamp(2rem, 6vw, 3.25rem); line-height: 1; margin: 0 0 .5rem;
+}
+.strip dd { margin: 0; color: var(--muted); font-size: .92rem; line-height: 1.4; }
+section { padding-block: clamp(2.25rem, 6vw, 3.5rem) 0; }
+.sec {
+  display: grid; grid-template-columns: 11rem minmax(0, 1fr); gap: 1rem 2.5rem;
+}
+.sec > h2 {
+  font-family: var(--mono); font-weight: 500; font-size: .8rem;
+  letter-spacing: .08em; text-transform: uppercase; margin: .35rem 0 0; color: var(--muted);
+}
+.sec > div { min-width: 0; }
+.case { padding-block: 0 2rem; margin-bottom: 2rem; border-bottom: 1px solid var(--rule); }
+.case:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
+.case h3 {
+  font-family: var(--display); font-stretch: 75%; font-weight: 800;
+  font-size: clamp(1.6rem, 4.5vw, 2.25rem); line-height: 1.05; margin: 0 0 .25rem;
+}
+.case .where { font-family: var(--mono); font-size: .8rem; color: var(--muted); margin: 0 0 1.1rem; }
+.rows { display: grid; gap: .9rem; margin: 0; }
+.rows div { display: grid; grid-template-columns: 6.5rem minmax(0, 1fr); gap: .25rem 1rem; }
+.rows dt { font-family: var(--mono); font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); padding-top: .2rem; }
+.rows dd { margin: 0; max-width: 40rem; }
+.rows dd p { margin: 0 0 .5rem; }
+.rows dd p:last-child { margin: 0; }
+.wins { list-style: none; margin: 0; padding: 0; display: grid; max-width: 42rem; }
+.wins li { padding-block: .85rem; border-bottom: 1px solid var(--rule); }
+.wins li:first-child { padding-top: 0; }
+.wins li:last-child { border-bottom: 0; }
+.jobs { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.5rem; }
+.jobs li { display: grid; grid-template-columns: 10rem minmax(0, 1fr); gap: .25rem 1.5rem; }
+.jobs .when { font-family: var(--mono); font-size: .8rem; color: var(--muted); padding-top: .25rem; }
+.jobs h3 { font-size: 1.05rem; margin: 0; font-weight: 600; }
+.jobs p { margin: .15rem 0 0; color: var(--muted); max-width: 38rem; }
+.skills { display: grid; gap: 1.25rem; }
+.skills h3 { font-size: .95rem; margin: 0 0 .4rem; font-weight: 600; }
+.chips { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .4rem; }
+.chips li { border: 1px solid var(--rule); background: var(--surface); padding: .2rem .6rem; font-size: .9rem; border-radius: 2px; }
+.contact { background: var(--surface); border: 1px solid var(--rule); padding: clamp(1.25rem, 4vw, 2rem); }
+.contact h2 {
+  font-family: var(--display); font-stretch: 75%; font-weight: 800;
+  font-size: clamp(1.8rem, 6vw, 3rem); line-height: 1; margin: 0 0 .75rem;
+}
+.contact > p { margin: 0 0 1.5rem; max-width: 36rem; }
+.lines { display: grid; gap: .75rem; margin: 0 0 1.5rem; }
+.line { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem 1rem; }
+.line .k { font-family: var(--mono); font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); width: 7.5rem; }
+.line .val { font-family: var(--mono); font-size: .98rem; overflow-wrap: anywhere; min-width: 0; }
+.copy {
+  font: 500 .8rem var(--mono); border: 1px solid var(--fg); background: transparent; color: var(--fg);
+  padding: .2rem .6rem; cursor: pointer; border-radius: 2px;
+}
+.copy:hover { background: var(--hl); border-color: var(--hl); color: var(--on-hl); }
+footer { padding-top: 2rem; color: var(--muted); font-size: .85rem; }
+@media (max-width: 720px) {
+  .sec { grid-template-columns: minmax(0, 1fr); }
+  .strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .jobs li { grid-template-columns: minmax(0, 1fr); }
+  .rows div { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 420px) {
+  .line .k { width: 100%; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <b>Ruqoyyah Bello</b>
+    <span>Lagos, Nigeria &nbsp;|&nbsp; Open to remote roles</span>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1>I fix the <span class="hl">cause</span>, not just the ticket.</h1>
+      <p class="lede">Customer Success Specialist with 5+ years in support, onboarding, and account management. I look after 45 accounts at Fichaya, a home services platform, and I founded ChatDesk.ng.</p>
+      <div class="cta">
+        <a class="btn primary" href="https://wa.me/2347086208438" target="_blank" rel="noopener">Message on WhatsApp</a>
+        <a class="btn" href="#contact">Contact details</a>
+      </div>
+    </div>
+
+    <dl class="strip" aria-label="Results at a glance">
+      <div><dt><span class="hl">45</span></dt><dd>accounts managed as the main point of contact</dd></div>
+      <div><dt><span class="hl">95%</span></dt><dd>CSAT score across the portfolio</dd></div>
+      <div><dt><span class="hl">60%</span></dt><dd>fewer repeat complaints</dd></div>
+      <div><dt><span class="hl">N30M+</span></dt><dd>account revenue growth in 18 months</dd></div>
+    </dl>
+
+    <section id="achievements">
+      <div class="sec">
+        <h2>Achievements</h2>
+        <ul class="wins">
+          <li><span class="hl">N30M+</span> account revenue growth in 18 months at Fichaya, through tailored success plans and retention work.</li>
+          <li><span class="hl">95% CSAT</span> and a 2 minute average response time across 45 accounts.</li>
+          <li><span class="hl">60% fewer</span> repeat complaints after I built a structured follow up system.</li>
+          <li>Closed escalated cases within agreed timelines by working with Operations and QA.</li>
+          <li><span class="hl">80+</span> customer interactions a day handled at Jumia Nigeria.</li>
+          <li>Recognised at Jumia for strong customer satisfaction scores and low escalation rates.</li>
+          <li>Founded ChatDesk.ng, a WhatsApp communication management business.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="sec">
+        <h2>What I built</h2>
+        <div>
+          <article class="case">
+            <h3>A follow up system that cut repeat complaints by 60%</h3>
+            <p class="where">Fichaya, Customer Success</p>
+            <dl class="rows">
+              <div><dt>Problem</dt><dd>The same customer complaints kept coming back.</dd></div>
+              <div><dt>Action</dt><dd>
+                <p>Tracked account activity and feedback to find the patterns behind the complaints.</p>
+                <p>Built a structured follow up system so issues were handled before they escalated.</p>
+                <p>Shared findings and process fixes with internal teams.</p>
+              </dd></div>
+              <div><dt>Result</dt><dd><span class="hl">Repeat complaints down 60%.</span></dd></div>
+            </dl>
+          </article>
+
+          <article class="case">
+            <h3>Customer success plans for 45 accounts</h3>
+            <p class="where">Fichaya, Account Management</p>
+            <dl class="rows">
+              <div><dt>Problem</dt><dd>Each account needed to see clear value from the service to stay and grow.</dd></div>
+              <div><dt>Action</dt><dd>
+                <p>Wrote a customer success plan for every account, with adoption milestones.</p>
+                <p>Ran regular check ins and reviews, and watched for upsell and expansion openings.</p>
+              </dd></div>
+              <div><dt>Result</dt><dd><span class="hl">Account revenue up by over N30M in 18 months, with CSAT held at 95%.</span></dd></div>
+            </dl>
+          </article>
+
+          <article class="case">
+            <h3>ChatDesk.ng</h3>
+            <p class="where">Founder</p>
+            <dl class="rows">
+              <div><dt>Problem</dt><dd>Small businesses in beauty, makeup, fashion, and event rentals need their WhatsApp communication managed.</dd></div>
+              <div><dt>Action</dt><dd>
+                <p>Started ChatDesk.ng, a WhatsApp communication management service for Nigerian small businesses.</p>
+                <p>Designed Basic, Standard, and Premium monthly plans with a trial option.</p>
+                <p>Built a directory of prospects and wrote personalised outreach by email and Instagram for each one.</p>
+              </dd></div>
+              <div><dt>Status</dt><dd><span class="hl">Service, pricing, and outreach are in place.</span></dd></div>
+            </dl>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="sec">
+        <h2>Experience</h2>
+        <ul class="jobs">
+          <li>
+            <span class="when">Aug 2023 to Present</span>
+            <div>
+              <h3>Customer Success and Account Management Representative, Fichaya</h3>
+              <p>Main contact for 45 accounts. Onboarding, adoption, escalations, billing questions, and renewals. Works with Operations and QA.</p>
+            </div>
+          </li>
+          <li>
+            <span class="when">Apr 2023 to Jul 2023</span>
+            <div>
+              <h3>Client Relationship Manager, Multiform Engineering</h3>
+              <p>Primary contact for B2B clients from onboarding to renewal. Resolved issues within SLA timelines.</p>
+            </div>
+          </li>
+          <li>
+            <span class="when">Nov 2021 to Feb 2023</span>
+            <div>
+              <h3>Customer Service Representative, Jumia Nigeria</h3>
+              <p>Phone, chat, and email support on a large ecommerce platform, averaging 80+ interactions a day.</p>
+            </div>
+          </li>
+          <li>
+            <span class="when">2021</span>
+            <div>
+              <h3>B.Sc. Political Science, University of Lagos</h3>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="sec">
+        <h2>Skills and tools</h2>
+        <div class="skills">
+          <div>
+            <h3>What I do</h3>
+            <ul class="chips">
+              <li>Root cause analysis</li><li>Onboarding and adoption</li><li>Escalation handling</li>
+              <li>Complaint trend analysis</li><li>Billing and payment questions</li><li>Customer success planning</li>
+              <li>Process improvement</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Tools</h3>
+            <ul class="chips">
+              <li>Zoho CRM</li><li>Salesforce</li><li>Crisp</li><li>Freshdesk</li>
+              <li>Google Workspace</li><li>Microsoft Office</li><li>Slack</li><li>Zoom</li><li>Microsoft Teams</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Languages</h3>
+            <ul class="chips"><li>English (fluent)</li><li>Yoruba (fluent)</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact">
+        <h2>Let us talk.</h2>
+        <p>I am open to remote Customer Success and Support roles. WhatsApp is the fastest way to reach me.</p>
+        <div class="lines">
+          <div class="line"><span class="k">Email</span><span class="val">brukayat1@gmail.com</span><button class="copy" type="button" data-copy="brukayat1@gmail.com">Copy</button></div>
+          <div class="line"><span class="k">WhatsApp</span><span class="val">07086208438</span><button class="copy" type="button" data-copy="07086208438">Copy</button></div>
+          <div class="line"><span class="k">Calls</span><span class="val">07071810507</span><button class="copy" type="button" data-copy="07071810507">Copy</button></div>
+        </div>
+        <a class="btn primary" href="https://wa.me/2347086208438" target="_blank" rel="noopener">Message on WhatsApp</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>Ruqoyyah Bello, Lagos, Nigeria</footer>
+</div>
+
+<script>
+document.querySelectorAll('.copy').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var text = btn.getAttribute('data-copy');
+    var label = btn.textContent;
+    function done(msg) {
+      btn.textContent = msg;
+      setTimeout(function () { btn.textContent = label; }, 1600);
+    }
+    function fallback() {
+      var el = btn.parentElement.querySelector('.val');
+      try {
+        var r = document.createRange();
+        r.selectNodeContents(el);
+        var s = window.getSelection();
+        s.removeAllRanges();
+        s.addRange(r);
+        done('Selected');
+      } catch (e) { done('Select it'); }
+    }
+    try {
+      navigator.clipboard.writeText(text).then(function () { done('Copied'); }, fallback);
+    } catch (e) { fallback(); }
+  });
+});
+</script>
+</body>
+</html>
